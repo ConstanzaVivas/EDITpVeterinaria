@@ -8,7 +8,6 @@ export class MascoHijosService {
         let mascota ={
             "id" : "1",
             "nombre" : "Pepe",
-
             "especie" : "Perro",
             "raza":"bulldog",
             "edad" : "1",
@@ -59,7 +58,10 @@ export class MascoHijosService {
         return "Mascota ingresada correctamente";
         
 
-    }}
+    }
+   
+
+}
+
     
     
-            

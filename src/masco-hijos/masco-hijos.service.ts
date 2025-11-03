@@ -13,6 +13,7 @@ export class MascoHijosService {
             "edad" : "1",
             "duenio" : "Rodolfo Fernandez",
             "telefono" : "0303456"
+            
         };
         this.mascotas.push(mascota);
         mascota ={

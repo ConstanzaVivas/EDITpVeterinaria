@@ -44,4 +44,5 @@ A tener en cuenta que:
 - Las mascotas deben tener nombre, especie y dueño.
 - Los tratamientos y vacunas deben tener los datos obligatorios.
 - Las respuestas se devuelven en formato JSON.
+- Hay comentarios sugeridos por el chat que los dejo compartidos para seguir mejorando. 
 

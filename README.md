@@ -1,11 +1,15 @@
-Clínica Veterinaria – API REST (NestJS)
-Autor: Vivas, Constanza
+Clínica Veterinaria Sousa
+
 Materia: EDI – Trabajo Final NestJS
+Alumna: Vivas, Constanza
 Profesora: Marina Gisele Keimel
-Año: 2025
+Fecha de entrega: 3-11-2025
+
+
 Objetivo del trabajo
 El proyecto consiste en una API sencilla creada con NestJS, la misma sirve para simular el sistema de una clínica veterinaria donde se pueden manejar mascotas, dueños, turnos, diagnósticos, vacunas y tratamientos. Todo se guarda en memoria, sin base de datos, para que sea más simple.
-Cómo se usa
+
+Pasos para el tp: 
 1. Instalar dependencias con el comando: npm install
 2. Ejecutar el servidor con: npm run start:dev
 3. La API funciona en http://localhost:3000
@@ -14,6 +18,7 @@ El proyecto tiene dos partes principales:
 - masco-hijos: maneja las mascotas, dueños y su historial.
 - agenda: maneja los turnos, vacunas, tratamientos y diagnósticos.
 Servicios principales
+
 1. Mascotas (masco-hijos)
 Permite registrar y consultar las mascotas y sus dueños. También se puede ver el historial médico y una lista de recordatorios para chequeos o vacunas.
 Principales rutas:

@@ -72,9 +72,25 @@ export class MascoHijosService {
     return "Faltan datos: nombre, especie o dueño.";
   }
 
-  this.mascotas.push(mascota);
-  return "Mascota ingresada correctamente";
+  const nuevoId = this.mascotas.length > 0 
+    ? (parseInt(this.mascotas[this.mascotas.length - 1].id) + 1).toString()
+    : "1";
+
+  const nuevaMascota = {
+    id: nuevoId,
+    nombre: mascota.nombre,
+    especie: mascota.especie,
+    raza: mascota.raza,
+    edad: mascota.edad,
+    duenio: mascota.duenio,
+    telefono: mascota.telefono,
+    historial: mascota.historial || []
+  };
+
+  this.mascotas.push(nuevaMascota);
+  return "Mascota ingresada correctamente con id " + nuevoId;
 }
+ 
 
    getHistorialMascota(id: string) {
     for (let i = 0; i < this.mascotas.length; i++) {
@@ -137,6 +153,37 @@ export class MascoHijosService {
     }
   }
   return duenos;
+}
+
+
+borrarMascota(id: string) {
+  for (let i = 0; i < this.mascotas.length; i++) {
+    if (this.mascotas[i].id == id) {
+      const duenio = this.mascotas[i].duenio;
+
+
+      for (let j = i; j < this.mascotas.length - 1; j++) {
+        this.mascotas[j] = this.mascotas[j + 1];
+      }
+      this.mascotas.pop();
+
+  
+      let quedan = false;
+      for (let k = 0; k < this.mascotas.length; k++) {
+        if (this.mascotas[k].duenio === duenio) {
+          quedan = true;
+          break;
+        }
+      }
+
+      return {
+        mensaje: "Mascota eliminada",
+        duenio,
+        duenioSigueConMascotas: quedan
+      };
+    }
+  }
+  return "No se encontró la mascota a eliminar";
 }
 
 

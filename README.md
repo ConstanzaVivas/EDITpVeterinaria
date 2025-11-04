@@ -24,6 +24,7 @@ Principales rutas:
 - POST /masco-hijos/pacientes/:id/historial → agrega un evento al historial.
 - GET /masco-hijos/recordatorios/chequeos → muestra mascotas sin historial.
 - GET /masco-hijos/duenos → lista todos los dueños registrados.
+
 2. Agenda (turnos, diagnósticos, vacunas, tratamientos)
 Permite registrar y administrar turnos veterinarios, además de guardar diagnósticos, vacunas y tratamientos.
 Turnos:
@@ -37,7 +38,8 @@ Diagnósticos, vacunas y tratamientos:
 - POST /agenda/diagnosticos → agrega un diagnóstico (requiere mascota, fecha y descripción).
 - POST /agenda/vacunas → agrega una vacuna (requiere mascota, fecha y nombre de vacuna).
 - POST /agenda/tratamientos → agrega un tratamiento (requiere mascota, fecha, medicamento, dosis y días).
-Validaciones básicas
+
+A tener en cuenta que:
 - No se pueden crear turnos con fechas pasadas.
 - Las mascotas deben tener nombre, especie y dueño.
 - Los tratamientos y vacunas deben tener los datos obligatorios.

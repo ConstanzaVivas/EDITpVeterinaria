@@ -1,5 +1,5 @@
+import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
 import { MascoHijosService } from './masco-hijos.service';
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 
 @Controller('masco-hijos')
 export class MascoHijosController {
@@ -38,6 +38,10 @@ export class MascoHijosController {
         return this.mascotasService.getDuenos();
     }
 
+     @Delete('pacientes/:id')
+  borrarMascota(@Param('id') id: string) {
+    return this.mascotasService.borrarMascota(id);
+  }
 }
 
 

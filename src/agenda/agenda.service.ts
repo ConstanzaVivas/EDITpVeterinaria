@@ -140,11 +140,6 @@ export class AgendaService {
     return 'Tratamiento registrado';
   }
 
-  //POCHI
-  // (Opcional pero recomendado) “Administrar” = actualizar y borrar
-  // Si querés cubrir “administrar” como CRUD completo, 
-  //agregá estos dos métodos chiquitos (pegalos abajo del todo):
-
   actualizarTurno(id: string, data: any) {
     for (let i = 0; i < this.turnos.length; i++) {
       if (this.turnos[i].id === id) {
